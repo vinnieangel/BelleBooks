@@ -1,5 +1,6 @@
 import React from "react";
 import BookItem from "./BookItem";
+import BookForm from "../NewBook/BookForm";
 
 const Books = (props) => {
   return (
@@ -13,6 +14,7 @@ const Books = (props) => {
           date={book.dateFinished}
         />
       ))}
+      <BookForm></BookForm>
     </ul>
   );
 };

@@ -34,9 +34,9 @@ const DUMMY_BOOKS = [
 
 function App() {
   return (
-    <div>
-      <h1 className=".book-header">My Books</h1>
-      <Books books={DUMMY_BOOKS}></Books>);
+    <div className=".book-header">
+      <h1>My Books</h1>
+      <Books books={DUMMY_BOOKS}></Books>
     </div>
   );
 }

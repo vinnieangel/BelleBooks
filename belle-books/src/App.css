@@ -1,8 +1,9 @@
 .book-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  font-size: 1rem;
+  font-weight: bold;
+  color: white;
+  background-color: #083ce7;
+  border: 1px solid white;
   padding: 0.5rem;
-  margin: 1rem 0;
-  background-color: #4b4b4b;
+  border-radius: 12px;
 }

@@ -1,23 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Books from "./Components/Books/Books";
+
+const DUMMY_BOOKS = [
+  {
+    id: "b1",
+    title: "Into the water",
+    description: "This is an exciting book",
+    rating: 9.5,
+    dateFinished: new Date(2020, 7, 14),
+  },
+  {
+    id: "b2",
+    title: "Into the water",
+    description: "This is an exciting book",
+    rating: 9.5,
+    dateFinished: new Date(2020, 7, 14),
+  },
+  {
+    id: "b3",
+    title: "Into the water",
+    description: "This is an exciting book",
+    rating: 9.5,
+    dateFinished: new Date(2020, 7, 14),
+  },
+  {
+    id: "b4",
+    title: "Into the water",
+    description: "This is an exciting book",
+    rating: 9.5,
+    dateFinished: new Date(2020, 7, 14),
+  },
+];
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1 className=".book-header">My Books</h1>
+      <Books books={DUMMY_BOOKS}></Books>);
     </div>
   );
 }

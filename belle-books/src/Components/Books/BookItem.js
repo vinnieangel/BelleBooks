@@ -8,12 +8,12 @@ const BookItem = (props) => {
   return (
     <li>
       <div className="book-item__description">
-        <div>{month}</div>
-        <div>{day}</div>
-        <div>{year}</div>
-        <h2>{props.title}</h2>
+        <div className="book-item__title">{month}</div>
+        <div className="book-item__title">{day}</div>
+        <div className="book-item__title">{year}</div>
+        <h2 className="book-item__title">{props.title}</h2>
         <div className="book-item__rating">{props.rating}/10</div>
-        <div>{props.description}</div>
+        <div className="book-item__title">{props.description}</div>
       </div>
     </li>
   );

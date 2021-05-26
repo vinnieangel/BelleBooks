@@ -1,5 +1,6 @@
 import "./App.css";
 import Books from "./Components/Books/Books";
+import React, { useState } from "react";
 
 const DUMMY_BOOKS = [
   {
@@ -33,10 +34,18 @@ const DUMMY_BOOKS = [
 ];
 
 function App() {
+  const [books, addBooks] = useState(DUMMY_BOOKS);
+
+  const addBookHandler = (book) => {
+    addBooks((prevBooks) => {
+      return [book, ...prevBooks];
+    });
+  };
+
   return (
     <div>
       <h1 className="book-item__title">My Books</h1>
-      <Books books={DUMMY_BOOKS}></Books>
+      <Books books={books} onAddBook={addBookHandler}></Books>
     </div>
   );
 }

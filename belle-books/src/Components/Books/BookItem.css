@@ -58,4 +58,9 @@
     font-size: 1.25rem;
     padding: 0.5rem 1.5rem;
   }
+  .ul.no-bullets {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margins */
+  }
 }

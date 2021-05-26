@@ -1,9 +1,14 @@
 .book-header {
-  font-size: 1rem;
+  font-size: 4rem;
+  text-align: center;
   font-weight: bold;
   color: white;
   background-color: #083ce7;
   border: 1px solid white;
   padding: 0.5rem;
   border-radius: 12px;
+}
+
+.TITLE {
+  align-items: center;
 }

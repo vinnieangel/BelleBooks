@@ -44,7 +44,7 @@ function App() {
 
   return (
     <div>
-      <h1 className="book-item__title">My Books</h1>
+      <h1 className="book-header">My Books</h1>
       <Books books={books} onAddBook={addBookHandler}></Books>
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 import BookItem from "./BookItem";
 import BookForm from "../NewBook/BookForm";
 import Card from "../Card/Card";
-import "./BookItem.css";
+import "./Books.css";
 
 const Books = (props) => {
   const saveBookDataHandler = (enteredBookData) => {
@@ -15,7 +15,7 @@ const Books = (props) => {
   return (
     <div>
       <Card>
-        <ul className=".ul.no-bullets">
+        <ul className="books-list">
           {props.books.map((book) => (
             <BookItem
               key={book.id}

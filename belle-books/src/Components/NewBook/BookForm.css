@@ -34,11 +34,15 @@
 }
 
 .new-book__actions {
-  text-align: right;
+  color: white;
+  font-weight: 100;
+  text-align: center;
+  width: "500px";
+  height: "300px";
 }
 
 .new-book {
-  background-color: #a892ee;
+  background-color: #083ce7;
   padding: 1rem;
   margin: 2rem auto;
   width: 50rem;

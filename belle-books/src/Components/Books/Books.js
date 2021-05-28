@@ -3,6 +3,7 @@ import BookItem from "./BookItem";
 import BookForm from "../NewBook/BookForm";
 import Card from "../Card/Card";
 import "./Books.css";
+import BookFilter from "./BookFilter";
 
 const Books = (props) => {
   const saveBookDataHandler = (enteredBookData) => {
@@ -14,6 +15,7 @@ const Books = (props) => {
   };
   return (
     <div>
+      <BookFilter></BookFilter>
       <Card>
         <ul className="books-list">
           {props.books.map((book) => (
@@ -27,9 +29,8 @@ const Books = (props) => {
           ))}
         </ul>
       </Card>
-      <Card>
-        <BookForm onSaveBookData={saveBookDataHandler}></BookForm>
-      </Card>
+
+      <BookForm onSaveBookData={saveBookDataHandler}></BookForm>
     </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import BookItem from "./BookItem";
 import BookForm from "../NewBook/BookForm";
 import Card from "../Card/Card";
@@ -6,6 +6,23 @@ import "./Books.css";
 import BookFilter from "./BookFilter";
 
 const Books = (props) => {
+  const [filteredYear, setFilteredYear] = useState("0000");
+  const yearChangeHandler = (enteredYearData) => {
+    if (enteredYearData === "0000") {
+    }
+    setFilteredYear(enteredYearData);
+  };
+
+  var filteredBooks = props.books;
+
+  if (filteredYear === "0000") {
+    filteredBooks = props.books;
+  } else {
+    filteredBooks = props.books.filter(
+      (book) => book.dateFinished.getFullYear().toString() === filteredYear
+    );
+  }
+
   const saveBookDataHandler = (enteredBookData) => {
     const BookData = {
       ...enteredBookData,
@@ -15,10 +32,16 @@ const Books = (props) => {
   };
   return (
     <div>
-      <BookFilter></BookFilter>
+      <BookFilter
+        initialYear={filteredYear}
+        onYearChange={yearChangeHandler}
+      ></BookFilter>
+      <div className="book-item__title">
+        Total Number of Books: {filteredBooks.length}
+      </div>
       <Card>
         <ul className="books-list">
-          {props.books.map((book) => (
+          {filteredBooks.map((book) => (
             <BookItem
               key={book.id}
               title={book.title}

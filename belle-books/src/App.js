@@ -22,14 +22,14 @@ const DUMMY_BOOKS = [
     title: "Into the water",
     description: "This is an exciting book",
     rating: 9.5,
-    dateFinished: new Date(2020, 7, 14),
+    dateFinished: new Date(2022, 7, 14),
   },
   {
     id: "b4",
     title: "Into the water",
     description: "This is an exciting book",
     rating: 9.5,
-    dateFinished: new Date(2020, 7, 14),
+    dateFinished: new Date(2021, 7, 14),
   },
 ];
 

@@ -1,6 +1,8 @@
 import "./App.css";
 import Books from "./Components/Books/Books";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { getPosts } from "./actions/posts";
 
 const DUMMY_BOOKS = [
   {
@@ -34,6 +36,12 @@ const DUMMY_BOOKS = [
 ];
 
 function App() {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
+
   const [books, addBooks] = useState(DUMMY_BOOKS);
 
   const addBookHandler = (book) => {

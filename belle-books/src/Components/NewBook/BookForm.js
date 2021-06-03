@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import "./BookForm.css";
+import { useDispatch } from "react-redux";
+import { createPost } from "../../actions/posts";
 
 const BookForm = (props) => {
+  const [postData, setPostData] = useState({
+    title: "",
+    description: "",
+    rating: "",
+  });
+
+  const dispatch = useDispatch();
+
   const [enteredTitle, setEnteredTitle] = useState("");
   const [enteredAmount, setEnteredAmount] = useState("");
   const [enteredDate, setEnteredDate] = useState("");
@@ -83,6 +93,8 @@ const BookForm = (props) => {
       rating: +enteredAmount,
       dateFinished: new Date(enteredDate),
     };
+
+    dispatch(createPost(BookData)); //look here
 
     props.onSaveBookData(BookData);
     setEnteredTitle("");

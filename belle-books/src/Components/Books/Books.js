@@ -4,8 +4,13 @@ import BookForm from "../NewBook/BookForm";
 import Card from "../Card/Card";
 import "./Books.css";
 import BookFilter from "./BookFilter";
+import { useSelector } from "react-redux";
 
 const Books = (props) => {
+  const posts = useSelector((state) => state.posts);
+
+  console.log(posts);
+
   const [filteredYear, setFilteredYear] = useState("0000");
   const yearChangeHandler = (enteredYearData) => {
     if (enteredYearData === "0000") {

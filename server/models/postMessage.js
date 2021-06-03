@@ -4,7 +4,7 @@ const postSchema = mongoose.Schema({
   title: String,
   description: String,
   rating: String,
-  date: {
+  dateFinished: {
     type: Date,
     default: new Date(),
   },

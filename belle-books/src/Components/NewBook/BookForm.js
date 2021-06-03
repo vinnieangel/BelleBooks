@@ -4,12 +4,6 @@ import { useDispatch } from "react-redux";
 import { createPost } from "../../actions/posts";
 
 const BookForm = (props) => {
-  const [postData, setPostData] = useState({
-    title: "",
-    description: "",
-    rating: "",
-  });
-
   const dispatch = useDispatch();
 
   const [enteredTitle, setEnteredTitle] = useState("");

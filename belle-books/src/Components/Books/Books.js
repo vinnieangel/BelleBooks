@@ -9,7 +9,8 @@ import { useSelector } from "react-redux";
 const Books = (props) => {
   const posts = useSelector((state) => state.posts);
 
-  console.log(posts);
+  //console.log(posts);
+  //console.log(props.books);
 
   const [filteredYear, setFilteredYear] = useState("0000");
   const yearChangeHandler = (enteredYearData) => {
@@ -18,13 +19,13 @@ const Books = (props) => {
     setFilteredYear(enteredYearData);
   };
 
-  var filteredBooks = props.books;
+  var filteredBooks = posts;
 
   if (filteredYear === "0000") {
-    filteredBooks = props.books;
+    filteredBooks = posts;
   } else {
-    filteredBooks = props.books.filter(
-      (book) => book.dateFinished.getFullYear().toString() === filteredYear
+    filteredBooks = posts.filter(
+      (book) => book.dateFinished.toString().substring(0, 4) === filteredYear
     );
   }
 

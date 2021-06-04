@@ -20,6 +20,7 @@ const Books = (props) => {
   };
 
   var filteredBooks = posts;
+  var totalBooks = posts;
 
   if (filteredYear === "0000") {
     filteredBooks = posts;
@@ -43,7 +44,7 @@ const Books = (props) => {
         onYearChange={yearChangeHandler}
       ></BookFilter>
       <div className="book-item__title">
-        Total Number of Books: {filteredBooks.length}
+        Total Number of Books: {totalBooks.length}
       </div>
       <Card>
         <ul className="books-list">

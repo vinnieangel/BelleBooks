@@ -4,7 +4,7 @@
   align-items: center;
   padding: 0.5rem;
   margin: 1rem 0;
-  background-color: #4b4b4b;
+  background-color: #337d7d4b;
 }
 
 .book-item__description {
@@ -26,6 +26,7 @@
 }
 
 .book-item__rating {
+  align-self: center;
   font-size: 1rem;
   font-weight: bold;
   color: white;
@@ -36,6 +37,7 @@
 }
 
 .book-item__title {
+  align-self: center;
   font-size: 1rem;
   font-weight: bold;
   color: white;

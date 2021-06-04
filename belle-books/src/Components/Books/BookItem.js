@@ -1,5 +1,6 @@
 import React from "react";
 import "./BookItem.css";
+import Card from "../Card/Card";
 
 const BookItem = (props) => {
   //const month = props.date.toLocaleString("en-US", { month: "long" });
@@ -36,14 +37,14 @@ const BookItem = (props) => {
 
   return (
     <li>
-      <div className="book-item__description">
+      <Card className="book-item">
         <div className="book-item__title">{year}</div>
         <div className="book-item__title">{month}</div>
         <div className="book-item__title">{day}</div>
         <h2 className="book-item__title">{props.title}</h2>
         <div className="book-item__rating">{props.rating}/10</div>
         <div className="book-item__title">{props.description}</div>
-      </div>
+      </Card>
     </li>
   );
 };
